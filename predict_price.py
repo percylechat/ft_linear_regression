@@ -18,7 +18,7 @@ def estimatePrice(mileage, theta0, theta1):
     # donc pour une estimqtion du prix y dun kilometrage x
     # on fait theta0(une valeur de base ?)
     # plus theta1 * km 9une valeur au km * nbr de km)
-    return int(theta0) + (int(theta1) * int(mileage))
+    return theta0 + (theta1 * mileage)
 
 
 if __name__ == "__main__":
@@ -29,5 +29,5 @@ if __name__ == "__main__":
     mileage = float(input("Enter the mileage of the car: "))
 
     # Predict the price
-    estimated_price = estimatePrice(mileage, theta0, theta1)
+    estimated_price = estimatePrice(int(mileage), theta0, theta1)
     print("The estimated price for a car with", mileage, "mileage is:", estimated_price)
