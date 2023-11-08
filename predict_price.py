@@ -6,7 +6,7 @@
 def load_parameters(filename):
     try:
         with open(filename, "r") as file:
-            theta0, theta1 = map(float, file.read().split())
+            theta0, theta1 = map(float, file.read().split(','))
             return theta0, theta1
     except FileNotFoundError:
         return 0, 0  # Default values if no parameters have been trained yet
